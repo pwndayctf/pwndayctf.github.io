@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>
+Elite Security
+</title>
+</head>
+<body>
+<body bgcolor="#000000">
+<center><font color="white"><h1>PwnDayCTF - Secret Admin Panel</h1></center>
+<form name="login">
+<center>Username -> <input type="text" name="userid"/></center>
+<center>Password -> <input type="password" name="pswrd"/></center>
+<center><input type="button" onclick="check(this.form)" value="Login"/></center>
+<center><input type="reset" value="Cancel"/></center>
+</form>
+<script language="javascript">
+  var _0x3f55=["\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x69\x64","\x61\x64\x6D\x69\x6E\x69\x73\x74\x61\x72\x74\x6F\x72","\x70\x73\x77\x72\x64","\x73\x33\x63\x38\x72\x33\x34\x73\x66\x75\x63\x6B","\x6E\x6F\x74\x72\x65\x61\x6C\x6C\x79\x74\x68\x65\x66\x6C\x61\x67\x2E\x6A\x70\x67","\x6F\x70\x65\x6E","\x45\x72\x72\x6F\x72\x2E"];function check(_0x4ce4x2){if(_0x4ce4x2[_0x3f55[1]][_0x3f55[0]]== _0x3f55[2]&& _0x4ce4x2[_0x3f55[3]][_0x3f55[0]]== _0x3f55[4]){window[_0x3f55[6]](_0x3f55[5])}else {alert(_0x3f55[7])}}
+    window.onload = function() {
+        document.addEventListener("contextmenu", function(e){
+          e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function(e) {
+        //document.onkeydown = function(e) {
+          // "I" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            disabledEvent(e);
+          }
+          // "J" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            disabledEvent(e);
+          }
+          // "S" key + macOS
+          if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+            disabledEvent(e);
+          }
+          // "U" key
+          if (e.ctrlKey && e.keyCode == 85) {
+            disabledEvent(e);
+          }
+          // "F12" key
+          if (event.keyCode == 123) {
+            disabledEvent(e);
+          }
+        }, false);
+        function disabledEvent(e){
+          if (e.stopPropagation){
+            e.stopPropagation();
+          } else if (window.event){
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+</script>
+</body>
+</html>
