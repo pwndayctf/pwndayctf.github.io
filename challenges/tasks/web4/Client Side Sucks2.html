@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>
+Client Side Sucks2
+</title>
+</head>
+<body>
+<body bgcolor="#00fff3">
+<h2>This time, you can't do NOTHING! I learned my lesson. :)<br>good luck ;)</h2>
+<form name="login">
+Username :<input type="text" name="userid"/>
+Password :<input type="password" name="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+<script language="javascript">
+function check(form)
+{
+  if(form.userid.value == "admin" && form.pswrd.value == "0hr34lly") 
+      {
+        window.open('fuckfuckfuckfuckhesgoodhacker.html')
+      }
+     else
+     {
+       alert("go away :)")
+      }
+    }
+    window.onload = function() {
+        document.addEventListener("contextmenu", function(e){
+          e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function(e) {
+        //document.onkeydown = function(e) {
+          // "I" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            disabledEvent(e);
+          }
+          // "J" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            disabledEvent(e);
+          }
+          // "S" key + macOS
+          if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+            disabledEvent(e);
+          }
+          // "U" key
+          if (e.ctrlKey && e.keyCode == 85) {
+            disabledEvent(e);
+          }
+          // "F12" key
+          if (event.keyCode == 123) {
+            disabledEvent(e);
+          }
+        }, false);
+        function disabledEvent(e){
+          if (e.stopPropagation){
+            e.stopPropagation();
+          } else if (window.event){
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+</script>
+</body>
+</html>
