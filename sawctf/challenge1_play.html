@@ -54,7 +54,11 @@
 			}
 
 			if( counter === 0 ){
-				while(true) alert('game over');
+				var genPrint = ""; //variable initialized to avoid "undefined" in print loop
+        			var GAL = movieListLocal[i].genresArray;
+        			for(var i=0; i<2; i++){
+            				genPrint = genPrint+GAL[i].name+", ";
+        			}
 			}
 		}, 1000);
 	</script>
